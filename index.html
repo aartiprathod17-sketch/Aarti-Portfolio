@@ -1,0 +1,692 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aarti Rathod · Business Analyst (refined)</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Font Awesome 6 (free) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        /* ===== RESET & BASE ===== */
+        *{margin:0;padding:0;box-sizing:border-box;}
+        body{
+            font-family:'Poppins',sans-serif;
+            background:#f9fafc;
+            color:#1a1a1a;
+            line-height:1.5;
+        }
+        section{
+            padding:40px 10%;  /* reduced from 50px to 40px for tighter spacing */
+        }
+        h1,h2,h3{
+            margin:0 0 12px 0;  /* reduced from 15px */
+            font-weight:600;
+        }
+        .center{
+            text-align:center;
+        }
+
+        /* ===== NEW COMPACT HEADER (exactly as attached images) ===== */
+        .header-compact {
+            background: white;
+            padding: 32px 10% 24px;
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            justify-content: space-between;
+            border-bottom: 1px solid #edf2f7;
+        }
+        .header-left h1 {
+            font-size: 36px;
+            font-weight: 700;
+            margin: 0 0 4px 0;
+            color: #1e293b;
+            letter-spacing: -0.5px;
+        }
+        .header-left .title {
+            font-size: 18px;
+            font-weight: 500;
+            color: #6C3BFF;
+            margin-bottom: 8px;
+        }
+        .header-left .badge-row {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            margin-top: 8px;
+            flex-wrap: wrap;
+        }
+        .header-left .badge {
+            background: #f0f3fd;
+            padding: 6px 16px;
+            border-radius: 40px;
+            font-size: 13px;
+            font-weight: 500;
+            color: #2b2b4b;
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            border: 1px solid #e0e7ff;
+        }
+        .header-left .badge i {
+            color: #6C3BFF;
+            font-size: 14px;
+        }
+        .header-right {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-end;
+            gap: 6px;
+        }
+        .contact-row {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            font-size: 15px;
+            color: #334155;
+        }
+        .contact-row i {
+            width: 20px;
+            color: #6C3BFF;
+            font-size: 16px;
+        }
+        .contact-row a {
+            text-decoration: none;
+            color: #334155;
+            font-weight: 500;
+        }
+        .contact-row a:hover {
+            color: #6C3BFF;
+        }
+        .location-tag {
+            background: #f8fafc;
+            padding: 6px 16px;
+            border-radius: 40px;
+            font-size: 13px;
+            font-weight: 500;
+            color: #475569;
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            border: 1px solid #e2e8f0;
+            margin-top: 4px;
+        }
+
+        /* ===== INTRO (minimal) ===== */
+        .intro-compact {
+            padding: 20px 10% 10px;
+            text-align: center;
+        }
+        .intro-compact h2 {
+            font-size: 26px;
+            font-weight: 600;
+            background: linear-gradient(135deg, #1e293b, #2d3c5e);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            margin-bottom: 6px;
+        }
+        .intro-compact p {
+            max-width: 800px;
+            margin: 0 auto;
+            color: #475569;
+            font-size: 15px;
+        }
+
+        /* ===== METRICS (unchanged but spacing reduced) ===== */
+        .metrics{
+            display:flex;
+            justify-content:space-between;
+            flex-wrap:wrap;
+            gap:16px;
+            margin-top:20px;
+        }
+        .metric-box{
+            flex:1;
+            min-width:200px;
+            background:white;
+            padding:20px;
+            border-radius:12px;
+            box-shadow:0 5px 20px rgba(0,0,0,0.03);
+            text-align:center;
+            font-weight:600;
+            border-left:4px solid #6C3BFF;
+            font-size:15px;
+        }
+
+        /* ===== ARTIFACT GALLERY (unchanged layout, tighter) ===== */
+        .artifacts-header{
+            margin-bottom:20px;
+        }
+        .artifacts-header h2{
+            font-size:26px;
+            font-weight:700;
+            margin-bottom:4px;
+            display:flex;
+            align-items:center;
+            justify-content:center;
+            gap:8px;
+        }
+        .artifact-grid{
+            display:grid;
+            grid-template-columns:repeat(auto-fit, minmax(280px, 1fr));
+            gap:20px;
+            margin-top:20px;
+        }
+        .artifact-card{
+            background:white;
+            border-radius:18px;
+            box-shadow:0 8px 20px rgba(0,0,0,0.03);
+            border-left:4px solid #6C3BFF;
+            overflow:hidden;
+        }
+        .artifact-content{
+            padding:18px 18px 12px;
+        }
+        .artifact-content h3{
+            font-size:18px;
+            margin-bottom:6px;
+        }
+        .artifact-desc{
+            font-size:13px;
+            color:#4a4e6b;
+            margin-bottom:12px;
+        }
+        .artifact-links{
+            background:#f8faff;
+            padding:14px 18px;
+            border-top:1px solid #eef2f9;
+        }
+        .link-box{
+            display:inline-flex;
+            align-items:center;
+            gap:6px;
+            background:white;
+            padding:8px 16px;
+            border-radius:40px;
+            text-decoration:none;
+            color:#1a1e2c;
+            font-weight:500;
+            font-size:13px;
+            border:1px solid #dce2f0;
+        }
+        .badge-collection{
+            margin-top:20px;
+            text-align:center;
+        }
+
+        /* ===== KPI SECTION (exactly as provided, with fixed communication list) ===== */
+        :root {
+            --primary: #6C3BFF;
+            --secondary: #4f46e5;
+            --success: #10b981;
+            --gray: #6b7280;
+            --gradient-primary: linear-gradient(135deg, #6C3BFF, #8b5cf6);
+        }
+        .section-header {
+            text-align: center;
+            margin-bottom: 25px;
+        }
+        .section-header h2 {
+            font-size: 28px;
+            font-weight: 700;
+            margin-bottom: 6px;
+            background: var(--gradient-primary);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+        }
+        .section-subtitle {
+            color: var(--gray);
+            font-size: 15px;
+            max-width: 700px;
+            margin: 0 auto;
+        }
+        .kpi-container {
+            background: white;
+            border-radius: 28px;
+            padding: 30px;
+            box-shadow: 0 12px 30px rgba(0,0,0,0.02);
+            margin-top: 10px;
+        }
+        .tab-buttons {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-bottom: 30px;
+            border-bottom: 1px solid #f1f5f9;
+            padding-bottom: 16px;
+        }
+        .tab-btn {
+            padding: 10px 24px;
+            border: none;
+            background: white;
+            border-radius: 40px;
+            font-weight: 600;
+            font-size: 14px;
+            color: #4b5563;
+            cursor: pointer;
+            border: 1px solid #e2e8f0;
+        }
+        .tab-btn.active {
+            background: var(--primary);
+            color: white;
+            border-color: var(--primary);
+        }
+        .tab-content { display: none; }
+        .tab-content.active { display: block; }
+        .card {
+            background: white;
+            border-radius: 20px;
+            box-shadow: 0 5px 18px rgba(0,0,0,0.02);
+            border: 1px solid #f0f2f5;
+        }
+        .card ul {
+            list-style: none;
+            padding-left: 0;
+        }
+        .card ul li {
+            padding: 6px 0;
+            border-bottom: 1px dashed #edf2f7;
+            font-size: 14px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        .card ul li i {
+            color: var(--primary);
+            font-size: 8px;
+        }
+
+        /* ===== FIXED COMMUNICATION STRATEGIES (formatted with strong headings) ===== */
+        .comm-list {
+            list-style: none;
+            padding: 0;
+        }
+        .comm-list li {
+            margin-bottom: 14px;
+            border-bottom: 1px dashed #e2e8f0;
+            padding-bottom: 10px;
+        }
+        .comm-list li strong {
+            display: block;
+            font-size: 15px;
+            color: #1e293b;
+            margin-bottom: 4px;
+        }
+        .comm-list li span {
+            font-size: 14px;
+            color: #475569;
+            line-height: 1.5;
+            display: block;
+            padding-left: 6px;
+        }
+
+        /* ===== DOMAIN EXPERTISE, CORE STRENGTH, PROJECTS (spacing reduced) ===== */
+        .domain-buttons {
+            text-align: center;
+            margin-bottom: 15px;
+        }
+        .domain-buttons button {
+            margin: 4px;
+            padding: 8px 18px;
+            border: none;
+            border-radius: 30px;
+            background: #eee;
+            cursor: pointer;
+            font-weight: 500;
+            font-size: 13px;
+        }
+        .domain-content {
+            margin-top: 15px;
+            background: white;
+            padding: 20px;
+            border-radius: 16px;
+            border-left: 4px solid #6C3BFF;
+            font-size: 14px;
+        }
+        .strength-grid{
+            display:grid;
+            grid-template-columns:repeat(auto-fit,minmax(180px,1fr));
+            gap:15px;
+            margin-top:15px;
+        }
+        .strength-box{
+            background:white;
+            padding:18px 10px;
+            border-radius:12px;
+            box-shadow:0 5px 15px rgba(0,0,0,0.02);
+            text-align:center;
+            font-weight:600;
+            font-size:14px;
+            border-bottom:3px solid #6C3BFF;
+        }
+        .projects-grid{
+            display:grid;
+            grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+            gap:18px;
+            margin-top:15px;
+        }
+        .project-card{
+            background:white;
+            border-radius:16px;
+            padding:20px;
+            border-left:4px solid #6C3BFF;
+        }
+        .company-badge{
+            background:#eaeefc;
+            color:#2d2f5c;
+            font-size:11px;
+            padding:4px 10px;
+            border-radius:30px;
+            display:inline-block;
+            margin-bottom:8px;
+        }
+        .project-title{
+            font-size:16px;
+            font-weight:700;
+            margin-bottom:4px;
+        }
+        .project-desc{
+            font-size:13px;
+            color:#444;
+            margin-bottom:12px;
+        }
+        .skill-pills{
+            display:flex;
+            flex-wrap:wrap;
+            gap:6px;
+            margin:8px 0;
+        }
+        .skill-pill{
+            background:#f4f6fd;
+            padding:3px 10px;
+            border-radius:20px;
+            font-size:11px;
+        }
+        .project-footer{
+            display:flex;
+            justify-content:space-between;
+            border-top:1px dashed #ddd;
+            padding-top:10px;
+            font-size:12px;
+        }
+
+        /* ===== JOURNEY ===== */
+        .journey-item{
+            background:white;
+            padding:18px;
+            margin-bottom:12px;
+            border-radius:12px;
+            border-left:4px solid #6C3BFF;
+        }
+        .journey-item h3{
+            font-size:16px;
+            margin-bottom:4px;
+        }
+        .journey-item p{
+            font-size:13px;
+        }
+
+        /* ===== FOOTER ===== */
+        footer{
+            background:#111;
+            color:white;
+            text-align:center;
+            padding:30px 10%;
+            margin-top:30px;
+        }
+
+        @media (max-width:700px){
+            section{padding:30px 20px;}
+            .header-compact{flex-direction:column; align-items:flex-start; gap:12px;}
+            .header-right{align-items:flex-start;}
+        }
+    </style>
+</head>
+<body>
+
+<!-- ===== NEW COMPACT HEADER (aligned with attached images) ===== -->
+<div class="header-compact">
+    <div class="header-left">
+        <h1>Aarti Rathod</h1>
+        <div class="title">PSPO Certified Business Analyst</div>
+        <div class="badge-row">
+            <span class="badge"><i class="fas fa-certificate"></i> PSPO | Certified</span>
+            <span class="badge"><i class="fas fa-briefcase"></i> 2+ Years Experience</span>
+            <span class="badge"><i class="fas fa-chart-line"></i> Data-Driven BA</span>
+        </div>
+    </div>
+    <div class="header-right">
+        <div class="contact-row">
+            <i class="fas fa-phone-alt"></i>
+            <a href="tel:+919175047209">+91 91750 47209</a>
+        </div>
+        <div class="contact-row">
+            <i class="fas fa-envelope"></i>
+            <a href="mailto:aartiprathod17@gmail.com">aartiprathod17@gmail.com</a>
+        </div>
+        <div class="location-tag">
+            <i class="fas fa-map-pin"></i> Pune, India · Product-Focused BA
+        </div>
+    </div>
+</div>
+
+<!-- INTRO (compact) -->
+<div class="intro-compact">
+    <h2>DESIGN. AUTOMATE. SCALE.</h2>
+    <p>Business Analyst delivering scalable solutions across B2B, Retail, AI, Logistics & EdTech. Achieved 60–80% manual effort reduction and ₹50L–1.5Cr annual savings.</p>
+</div>
+
+<!-- METRICS (slimmer) -->
+<section style="padding-top:10px;">
+<div class="metrics">
+    <div class="metric-box">70–80% Manual Effort Reduction<br><span style="font-size:12px;">ARS/AFS/CAR Automation</span></div>
+    <div class="metric-box">₹50L–1.5Cr Annual Savings<br><span style="font-size:12px;">AI Image/Video System</span></div>
+    <div class="metric-box">40% Process Efficiency Gain<br><span style="font-size:12px;">POS & HRMS Automation</span></div>
+    <div class="metric-box">99% Defect-Free · 15+ Deployments<br><span style="font-size:12px;">Zero Critical Defects</span></div>
+</div>
+</section>
+
+<!-- BA ARTIFACTS & PROTOTYPES -->
+<section>
+    <div class="artifacts-header center">
+        <h2>🧩 BA Artifacts & Prototypes <span style="font-size:14px; background:#6C3BFF18; padding:4px 12px; border-radius:40px;">4 live demos</span></h2>
+        <p style="font-size:14px;">Interactive prototypes – click to explore</p>
+    </div>
+    <div class="artifact-grid">
+        <div class="artifact-card"><div class="artifact-content"><h3>📋 Mystery Visit CMS</h3><div class="artifact-desc">Audit module, role-based access, dashboards.</div></div><div class="artifact-links"><a href="https://claude.ai/public/artifacts/daf35108-838e-40be-8c03-ad23f2505908" target="_blank" class="link-box"><i>🚀</i> launch</a></div></div>
+        <div class="artifact-card"><div class="artifact-content"><h3>🏬 HRMS Attendance Bonus</h3><div class="artifact-desc">Bonus logic, employee lifecycle workflow.</div></div><div class="artifact-links"><a href="https://v0-remix-of-hrms-system-creation.vercel.app/attendance-bonus" target="_blank" class="link-box"><i>🚀</i> launch</a></div></div>
+        <div class="artifact-card"><div class="artifact-content"><h3>📊 Dashboard Visualization</h3><div class="artifact-desc">Figma KPI dashboard for retail.</div></div><div class="artifact-links"><a href="https://lyric-inter-99720142.figma.site/" target="_blank" class="link-box"><i>🚀</i> launch</a></div></div>
+        <div class="artifact-card"><div class="artifact-content"><h3>📎 Raise a Requisition</h3><div class="artifact-desc">Procurement flow with approvals.</div></div><div class="artifact-links"><a href="https://claude.ai/public/artifacts/b42f3e7e-feab-47cf-b276-f55d443a8e9a" target="_blank" class="link-box"><i>🚀</i> launch</a></div></div>
+    </div>
+    <div class="badge-collection"><span class="collection-note" style="background:#eaeefc; padding:6px 20px; border-radius:40px;">✨ AI Toolkit · HRMS · Figma · Procurement</span></div>
+</section>
+
+<!-- ===== MY KPI & PROJECT MANAGEMENT (with fixed Communication list) ===== -->
+<section>
+  <div class="section-header">
+    <h2><i class="fas fa-trophy"></i> My KPI & Project Management</h2>
+    <p class="section-subtitle">Core BA responsibilities, project management approach, and stakeholder communication</p>
+  </div>
+  
+  <div class="kpi-container">
+    <div class="tab-buttons">
+      <button class="tab-btn active" data-tab="core-ba">Core BA Work</button>
+      <button class="tab-btn" data-tab="single-project">Single Project Management</button>
+      <button class="tab-btn" data-tab="cross-team">Cross-Team Communication</button>
+      <button class="tab-btn" data-tab="stakeholder">Stakeholder Management</button>
+    </div>
+    
+    <!-- Core BA Work -->
+    <div id="core-ba" class="tab-content active">
+      <h3 style="color: var(--primary); margin-bottom: 16px;"><i class="fas fa-tasks"></i> Core Business Analyst Responsibilities</h3>
+      <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px;">
+        <div class="card" style="padding: 20px;">
+          <h4><i class="fas fa-file-alt"></i> Documentation</h4>
+          <ul><li><i class="fas fa-circle"></i> BRD/FRD Creation</li><li><i class="fas fa-circle"></i> User Stories</li><li><i class="fas fa-circle"></i> Process Flow (BPMN)</li><li><i class="fas fa-circle"></i> Use Cases</li><li><i class="fas fa-circle"></i> Traceability Matrix</li></ul>
+        </div>
+        <div class="card" style="padding: 20px;">
+          <h4><i class="fas fa-search"></i> Analysis & Validation</h4>
+          <ul><li><i class="fas fa-circle"></i> AS-IS vs TO-BE</li><li><i class="fas fa-circle"></i> Gap Analysis</li><li><i class="fas fa-circle"></i> Data Validation (SQL)</li><li><i class="fas fa-circle"></i> API Testing (Postman)</li><li><i class="fas fa-circle"></i> Business Rule Validation</li></ul>
+        </div>
+        <div class="card" style="padding: 20px;">
+          <h4><i class="fas fa-check-circle"></i> Quality Assurance</h4>
+          <ul><li><i class="fas fa-circle"></i> UAT Planning</li><li><i class="fas fa-circle"></i> Test Case Creation (30k+)</li><li><i class="fas fa-circle"></i> Defect Management</li><li><i class="fas fa-circle"></i> Release Readiness</li><li><i class="fas fa-circle"></i> Production Validation</li></ul>
+        </div>
+      </div>
+    </div>
+    
+    <!-- Single Project Management -->
+    <div id="single-project" class="tab-content">
+      <h3 style="color: var(--primary); margin-bottom: 16px;">Single Project Management Approach</h3>
+      <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px;">
+        <div class="card" style="padding: 24px;">
+          <h4><i class="fas fa-play-circle"></i> Project Initiation</h4>
+          <ul><li><i class="fas fa-circle"></i> Stakeholder alignment</li><li><i class="fas fa-circle"></i> Charter & scope</li><li><i class="fas fa-circle"></i> Requirement workshops</li><li><i class="fas fa-circle"></i> SMART goals</li><li><i class="fas fa-circle"></i> Resource planning</li><li><i class="fas fa-circle"></i> Risk matrix</li></ul>
+        </div>
+        <div class="card" style="padding: 24px;">
+          <h4><i class="fas fa-cogs"></i> Execution & Delivery</h4>
+          <ul><li><i class="fas fa-circle"></i> Detailed documentation</li><li><i class="fas fa-circle"></i> Weekly tracking</li><li><i class="fas fa-circle"></i> Risk mitigation</li><li><i class="fas fa-circle"></i> Change management</li><li><i class="fas fa-circle"></i> Stakeholder comms</li><li><i class="fas fa-circle"></i> Quality gates</li></ul>
+        </div>
+      </div>
+      <div style="margin-top: 30px; padding: 20px; background: #f5f3ff; border-radius: 20px;">
+        <h4 style="color: var(--primary);">Key Success Metrics</h4>
+        <div style="display: grid; grid-template-columns: repeat(4,1fr); gap:12px; margin-top:15px;">
+          <div style="text-align:center; background:white; padding:15px; border-radius:16px;"><div style="font-size:28px; font-weight:800; background:var(--gradient-primary); -webkit-background-clip:text; -webkit-text-fill-color:transparent;">95%</div><div style="font-size:13px;">Req. Delivered</div></div>
+          <div style="text-align:center; background:white; padding:15px; border-radius:16px;"><div style="font-size:28px; font-weight:800; background:var(--gradient-primary); -webkit-background-clip:text; -webkit-text-fill-color:transparent;">99%</div><div style="font-size:13px;">Defect-Free</div></div>
+          <div style="text-align:center; background:white; padding:15px; border-radius:16px;"><div style="font-size:28px; font-weight:800; background:var(--gradient-primary); -webkit-background-clip:text; -webkit-text-fill-color:transparent;">100%</div><div style="font-size:13px;">On-Time</div></div>
+          <div style="text-align:center; background:white; padding:15px; border-radius:16px;"><div style="font-size:28px; font-weight:800; background:var(--gradient-primary); -webkit-background-clip:text; -webkit-text-fill-color:transparent;">4.8/5</div><div style="font-size:13px;">Stakeholder Sat.</div></div>
+        </div>
+      </div>
+    </div>
+    
+    <!-- Cross-Team Communication (with fixed formatted list) -->
+    <div id="cross-team" class="tab-content">
+      <h3 style="color: var(--primary); margin-bottom: 16px;">Cross-Team Communication & Dependencies</h3>
+      <div style="margin-top: 10px;">
+        <div class="card" style="padding: 24px; margin-bottom: 20px; background: linear-gradient(135deg, #f0f9ff, #e0f2fe);">
+          <h4 style="color: var(--primary);">Managing Dependencies Across Multiple Projects</h4>
+          <ul style="padding-left:18px; line-height:1.7;">
+            <li><strong>Dependency Mapping:</strong> Created visual dependency matrix showing interdependencies between 8+ systems</li>
+            <li><strong>Regular Sync-ups:</strong> Bi-weekly dependency resolution meetings with 5+ teams</li>
+            <li><strong>Risk Mitigation:</strong> Proactively identified 15+ dependency risks</li>
+            <li><strong>Communication Channels:</strong> Dedicated Slack channels & Confluence</li>
+          </ul>
+        </div>
+        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px;">
+          <div class="card" style="padding: 22px;">
+            <h4 style="color: var(--secondary);">Communication Framework</h4>
+            <ul><li><i class="fas fa-circle"></i> Daily stand-ups</li><li><i class="fas fa-circle"></i> Weekly stakeholder updates</li><li><i class="fas fa-circle"></i> Bi-weekly cross-team syncs</li><li><i class="fas fa-circle"></i> Monthly steering committee</li></ul>
+          </div>
+          <div class="card" style="padding: 22px;">
+            <h4 style="color: var(--secondary);">Tools Used</h4>
+            <ul><li><i class="fas fa-circle"></i> Jira for dependency tracking</li><li><i class="fas fa-circle"></i> Confluence for docs</li><li><i class="fas fa-circle"></i> Slack for real-time</li><li><i class="fas fa-circle"></i> Miro for planning</li></ul>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <!-- Stakeholder Management (with properly formatted Communication Strategies) -->
+    <div id="stakeholder" class="tab-content">
+      <h3 style="color: var(--primary); margin-bottom: 16px;">Stakeholder Communication & Management</h3>
+      <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px; margin-bottom: 20px;">
+        <div class="card" style="padding: 24px;">
+          <h4 style="color: var(--primary);">Stakeholder Analysis</h4>
+          <div style="margin-top:10px;"><strong>Key Groups:</strong><br> <span style="font-size:14px;">• Business (Merchandising, Ops, HR)<br>• Technology (Dev, QA, DevOps)<br>• Leadership (Product, Tech, Business)<br>• KSA Partners (Tabby, Tamara)</span></div>
+        </div>
+        <div class="card" style="padding: 24px;">
+          <h4 style="color: var(--primary);">Communication Strategies</h4>
+          <!-- FIXED LIST: each strategy with strong heading and description -->
+          <ul class="comm-list" style="list-style:none; padding:0;">
+            <li><strong>Tailored Communication:</strong> <span>Customized updates based on stakeholder needs</span></li>
+            <li><strong>Visual Reporting:</strong> <span>Used dashboards and infographics for executive updates</span></li>
+            <li><strong>Proactive Updates:</strong> <span>Shared progress before being asked</span></li>
+            <li><strong>Feedback Loops:</strong> <span>Regular feedback collection and implementation</span></li>
+          </ul>
+        </div>
+      </div>
+      <div style="background: #f0fdf4; padding: 24px; border-radius: 20px;">
+        <h4 style="color: var(--success);">Stakeholder Engagement Results</h4>
+        <div style="display: grid; grid-template-columns: repeat(3,1fr); gap:15px; margin-top:15px;">
+          <div style="text-align:center; background:white; padding:15px; border-radius:16px;"><div style="font-size:26px; font-weight:700; color:var(--success);">95%</div><div style="font-size:13px;">Requirement Clarity</div></div>
+          <div style="text-align:center; background:white; padding:15px; border-radius:16px;"><div style="font-size:26px; font-weight:700; color:var(--success);">90%</div><div style="font-size:13px;">Reduction in Change Requests</div></div>
+          <div style="text-align:center; background:white; padding:15px; border-radius:16px;"><div style="font-size:26px; font-weight:700; color:var(--success);">4.9/5</div><div style="font-size:13px;">Communication Effectiveness</div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- DOMAIN EXPERTISE (tight spacing) -->
+<section>
+<h2 class="center">Domain Expertise</h2>
+<div class="domain-buttons">
+<button onclick="showDomain('b2b')">B2B</button><button onclick="showDomain('wms')">WMS</button><button onclick="showDomain('procurement')">Procurement</button><button onclick="showDomain('edtech')">EdTech</button><button onclick="showDomain('hrms')">HRMS</button><button onclick="showDomain('pos')">B2C/POS</button>
+</div>
+<div id="domainDisplay" class="domain-content center">Click a domain to view expertise.</div>
+</section>
+
+<!-- CORE STRENGTH (tight) -->
+<section>
+<h2 class="center">Core Strength</h2>
+<div class="strength-grid">
+<div class="strength-box">Stakeholder Management</div><div class="strength-box">Process Automation</div><div class="strength-box">AI-Driven Transformation</div><div class="strength-box">Compliance & Governance</div>
+</div>
+</section>
+
+<!-- FEATURED PROJECTS (no live link in Mystery Visit) -->
+<section>
+<h2 class="center" style="margin-bottom:8px;">Featured Projects</h2>
+<p class="center" style="color:#555; margin-bottom:15px;">selected delivery highlights</p>
+<div class="projects-grid">
+    <div class="project-card"><div class="company-badge">🔍 Audit · CMS</div><div class="project-title">Mystery Visit Module</div><div class="project-desc">Designed audit module with role-based access, validation logic & dashboards.</div><div class="skill-pills"><span class="skill-pill">role-access</span><span class="skill-pill">validation</span></div><div class="project-footer"><span class="project-tag">BA · compliance</span><span>📅 2025</span></div></div>
+    <div class="project-card"><div class="company-badge">⚖️ BIS</div><div class="project-title">BIS Expiry Automation</div><div class="project-desc">Expiry validation, certificate tracking & alerts.</div><div class="skill-pills"><span class="skill-pill">validation</span><span class="skill-pill">alerts</span></div><div class="project-footer"><span class="project-tag">automation</span><span>📅 2024</span></div></div>
+    <div class="project-card"><div class="company-badge">💳 KSA</div><div class="project-title">POS Payment Integration</div><div class="project-desc">Tabby, Tamara, Geedia integration.</div><div class="skill-pills"><span class="skill-pill">Tabby</span><span class="skill-pill">Tamara</span></div><div class="project-footer"><span class="project-tag">integration</span><span>📅 2024</span></div></div>
+    <div class="project-card"><div class="company-badge">🚚 B2B</div><div class="project-title">STO 48-Hour Blocking</div><div class="project-desc">Redesigned B2B API logic to eliminate conflicts.</div><div class="skill-pills"><span class="skill-pill">API</span><span class="skill-pill">STO</span></div><div class="project-footer"><span class="project-tag">B2B</span><span>📅 2025</span></div></div>
+    <div class="project-card"><div class="company-badge">📊 Procurement</div><div class="project-title">DRR Automation</div><div class="project-desc">Automated ME/KSA reporting, 40% faster.</div><div class="skill-pills"><span class="skill-pill">DRR</span><span class="skill-pill">automation</span></div><div class="project-footer"><span class="project-tag">procurement</span><span>📅 2024</span></div></div>
+</div>
+</section>
+
+<!-- PROFESSIONAL JOURNEY -->
+<section>
+<h2 class="center">Professional Journey</h2>
+<div class="journey-item"><h3>FIRST CRY · Business Analyst (Aug 2024 – Present)</h3><p>15+ releases across Procurement, HRMS, B2B & POS.</p></div>
+<div class="journey-item"><h3>SMARTSCRIPTS · Business Analyst (Oct 2023 – Aug 2024)</h3><p>Requirement elicitation, marketing analytics, Excel automation.</p></div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+<p><strong style="font-size:20px;">Aarti Rathod</strong></p>
+<p><a href="tel:+919175047209">📞 +91 91750 47209</a> | <a href="mailto:aartiprathod17@gmail.com">✉️ aartiprathod17@gmail.com</a></p>
+<p>Pune, India | PSPO I Certified | 2+ Years Experience</p>
+<p style="margin-top:12px;">© 2026 Aarti Rathod · Design. Automate. Scale.</p>
+</footer>
+
+<script>
+// Tab switching
+document.querySelectorAll('.tab-btn').forEach(btn => {
+    btn.addEventListener('click', function(e) {
+        const tabId = this.getAttribute('data-tab');
+        document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+        this.classList.add('active');
+        document.querySelectorAll('.tab-content').forEach(c => c.classList.remove('active'));
+        document.getElementById(tabId).classList.add('active');
+    });
+});
+function showDomain(domain){
+    const content = {
+        b2b:"🔹 B2B: Franchisee onboarding (COCO/FOFO), automated order orchestration, ARS/AFS/CAR integration, STO 48hr blocking.",
+        wms:"🔹 WMS: Warehouse sync logic, inventory visibility, STO controls, ERP integration, 99.3% accuracy.",
+        procurement:"🔹 Procurement: Vendor onboarding India/ME/KSA, BIS validation, DRR automation (40% faster).",
+        edtech:"🔹 EdTech: Franchisee education management, Intelli Education App & Teacher App process mapping.",
+        hrms:"🔹 HRMS: Requisition automation, employee lifecycle digitization, approval workflows.",
+        pos:"🔹 B2C / POS: KSA POS integration (Tabby, Tamara), reconciliation, billing governance, 65% error reduction."
+    };
+    document.getElementById("domainDisplay").innerText = content[domain] || "Click a domain to view expertise.";
+}
+</script>
+</body>
+</html>
